@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  #imageContainer,#imageContainer1 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #imageContainer img ,#imageContainer1 img  {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 5px;
+  }
+  .cont{
+
+    margin-left: 45%;
+  }
+  h1{
+    text-align: center;
+  }
+</style>
+
+</head>
+<body>
+   <h1 >Automatic</h1>
+    <div id="imageContainer"></div>
+   <h1>Manual</h1>
+    <div id="imageContainer1"></div>
+    <div class="cont">
+    <button class="btn1" id="prevButton" onclick="showPrevSet1()">Previous</button>
+    <button class="btn2" id="nextButton" onclick="showNextSet1()">Next</button>
+    </div>
+   
+<script src="tasks.js"></script>
+</body>
+</html>
