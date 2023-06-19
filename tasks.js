@@ -27,21 +27,32 @@ function displayImages1(images, startIndex, endIndex) {
 }
 
 function showPrevSet1() {
-  if (currentPage1 > 0) {
+  if (currentPage1 >0) {
     currentPage1--;
     var startIndex = currentPage1 * imagesPerPage1;
     var endIndex = startIndex + imagesPerPage1 - 1;
     displayImages1(imageUrls1, startIndex, endIndex);
   }
+  else{
+    currentPage1=totalPages1;
+  }
+
 }
 
+var totalPages1 = Math.ceil(imageUrls1.length / imagesPerPage1);
 function showNextSet1() {
-  var totalPages = Math.ceil(imageUrls1.length / imagesPerPage1);
-  if (currentPage1 < totalPages - 1) {
+  var totalPages1 = Math.ceil(imageUrls1.length / imagesPerPage1);
+  if (currentPage1 < totalPages1 -1) {
     currentPage1++;
     var startIndex = currentPage1 * imagesPerPage1;
     var endIndex = startIndex + imagesPerPage1 - 1;
     displayImages1(imageUrls1, startIndex, endIndex);
+  }
+  else{
+    currentPage1=0;
+    displayImages1(imageUrls1, 0, imagesPerPage1 - 1);
+
+
   }
 }
 displayImages1(imageUrls1, 0, imagesPerPage1 - 1);
@@ -62,7 +73,7 @@ displayImages1(imageUrls1, 0, imagesPerPage1 - 1);
   ];
 
   
-  var imagesPerPage = 4;
+  var imagesPerPage = 2;
   var currentPage = 0;
   
   function displayImages(images, startIndex, endIndex) {
